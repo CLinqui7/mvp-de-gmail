@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+
+netlify-dashboard/.env
+netlify-dashboard/node_modules
