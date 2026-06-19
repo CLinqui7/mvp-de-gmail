@@ -1,0 +1,331 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e5edf8;
+  background: #08111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(49, 124, 255, 0.22), transparent 32rem),
+    radial-gradient(circle at top right, rgba(0, 210, 178, 0.13), transparent 30rem),
+    #08111f;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.appShell {
+  width: min(1400px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 34px 0 54px;
+}
+
+.topbar,
+.controlPanel,
+.statCard,
+.tableWrap,
+.loginCard,
+.notice,
+.metaRow {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: center;
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.eyebrow {
+  color: #67e8f9;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 0.95;
+}
+
+p {
+  color: #9fb2cb;
+  margin: 0;
+}
+
+.topbarActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #e5edf8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 800;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.refreshButton {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.ghostButton,
+.linkButton {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.linkButton {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.notice {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  color: #bfdbfe;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.statCard {
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(96, 165, 250, 0.14);
+  color: #93c5fd;
+}
+
+.statCard.warning .statIcon {
+  background: rgba(251, 191, 36, 0.13);
+  color: #fbbf24;
+}
+
+.statCard span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.statCard strong {
+  font-size: 32px;
+}
+
+.controlPanel {
+  border-radius: 22px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 220px 220px;
+  gap: 12px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(2, 6, 23, 0.58);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 16px;
+  padding: 0 14px;
+}
+
+input,
+select {
+  width: 100%;
+  color: #e5edf8;
+  background: rgba(2, 6, 23, 0.58);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 16px;
+  padding: 13px 14px;
+  outline: none;
+}
+
+.searchBox input {
+  border: 0;
+  background: transparent;
+  padding-left: 0;
+}
+
+.metaRow {
+  border-radius: 18px;
+  margin: 16px 0;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #94a3b8;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tableWrap {
+  border-radius: 24px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1100px;
+}
+
+th,
+td {
+  padding: 15px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  vertical-align: top;
+}
+
+th {
+  color: #9fb2cb;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(2, 6, 23, 0.34);
+}
+
+.strong,
+.trackingCell {
+  font-weight: 900;
+}
+
+.pill {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.tracking_received {
+  background: rgba(34, 197, 94, 0.12);
+  color: #86efac;
+}
+
+.pending_tracking {
+  background: rgba(59, 130, 246, 0.14);
+  color: #93c5fd;
+}
+
+.pending_late {
+  background: rgba(245, 158, 11, 0.15);
+  color: #facc15;
+}
+
+.emptyState {
+  padding: 32px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.loginCard {
+  width: min(460px, 100%);
+  margin: 8vh auto;
+  padding: 34px;
+  border-radius: 28px;
+}
+
+.brandMark {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  font-weight: 950;
+  margin-bottom: 18px;
+}
+
+.loginForm {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.loginForm button {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.loginForm label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.message {
+  margin-top: 12px;
+  color: #bfdbfe;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbarActions {
+    justify-content: flex-start;
+  }
+
+  .statsGrid,
+  .controlPanel {
+    grid-template-columns: 1fr;
+  }
+}
